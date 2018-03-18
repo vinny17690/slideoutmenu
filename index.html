@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Sans Font</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="myslide-nav" class="slide-nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavbar()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Phones</a>
+        <a href="#">Tablets</a>
+        <a href="#">Computers</a>
+        <a href="#">Wearables</a>
+    </div>
+    <div class="container" onclick="openSlide(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <div id="main">
+        <h1>Page Content</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptas molestias odit deleniti ea possimus amet voluptates? Debitis dignissimos maiores at possimus impedit labore ab laudantium molestiae magni in est a corrupti reprehenderit ipsa deserunt minima et vitae voluptatum, hic ad, nostrum veritatis libero! Totam commodi facilis voluptas quos sed!</p>
+    </div>
+    <script>
+        function closeNavbar() {
+            document.getElementById('myslide-nav').style.width = "0px";
+            document.getElementById("main").style.marginLeft = "0px";
+            document.body.style.backgroundColor = "#f2f2f2";
+        }
+
+        function openSlide(x) {
+            x.classList.toggle("change");
+            document.getElementById('myslide-nav').style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
+        }
+    </script>
+</body>
+</html>
